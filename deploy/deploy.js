@@ -12,8 +12,8 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
         waitConfirmation: network.config.blockConfirmation || 6,
     });
 
-    if (network.config.chainId == 11155111 && process.env.ETHERSCAN_API_KEY) {
-        await verify(dummyJoy.address, []);
-    }
+    // if (network.config.chainId == 11155111 && process.env.ETHERSCAN_API_KEY) {
+    await verify(dummyJoy.address, []);
+    // }
 };
 module.exports.tags = ['FundJoy'];

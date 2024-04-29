@@ -4,12 +4,12 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "format": "prettier --write .",
         "coverage": "hardhat coverage",
-        "test": "hardhat test",
+        "format": "prettier --write .",
         "test:staging": "hardhat test --network sepiola",
-        "lint": "solhint 'contracts/**/*.sol'",
-        "lint:fix": "solhint 'contracts/**/*.sol' --fix"
+        "test": "hardhat test --network sepiola",
+        "lint:fix": "solhint 'contracts/**/*.sol' --fix",
+        "lint": "prettier --write . && solhint 'contracts/**/*.sol'"
     },
     "keywords": [],
     "author": "",
@@ -20,7 +20,7 @@
         "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.4.1",
         "dotenv": "^16.4.5",
         "hardhat": "^2.22.3",
-        "hardhat-deploy": "^0.12.3",
+        "hardhat-deploy": "^0.11.34",
         "hardhat-gas-reporter": "^1.0.10",
         "prettier-plugin-solidity": "^1.3.1",
         "solhint": "^4.5.4"
